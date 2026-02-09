@@ -1,1 +1,4 @@
 sudhakar thakur test adding command
+
+
+[{"_id":"6985cd9d2dbb5e9fb3ffdf91","username":"sudhakarkumar","password":"$2b$10$QOMb35HVf/TJNeJ0t.2GNugn9HZe.SPwZ6XQlBLeQQUBOnVODhrmS","email":"sudhakar@mail.com","repositories":[],"followedUsers":[],"starRepos":[]},{"_id":"6985ce4336b5401eb8718e52","username":"sudhkumar","password":"$2b$10$aJxiQ9eYgt4tkYnaqUlC4OijAgT4Jb5CRnH8oE1.ZhDrAkh8eX/6S","email":"sudmail.com","repositories":[],"followedUsers":[],"starRepos":[]},{"_id":"6985ce6b36b5401eb8718e53","username":"sudhkur","password":"$2b$10$7ltYOYEbm5JX/dprAjlb3.L.EYswwKIjh5diOgxk7rWOcsO7yE1xu","email":"sudmail.c","repositories":[],"followedUsers":[],"starRepos":[]},{"_id":"6985ce7d36b5401eb8718e54","username":"sudhkurldwfs","password":"$2b$10$Vv.scrPqLB1P7zhv.Itko./FMTroBf3kyJsytUdcoWuy4woX/iWay","email":"sudmail.ccxsfsfs","repositories":[],"followedUsers":[],"starRepos":[]}]

@@ -15,25 +15,28 @@ const UserSchema = new Schema({
         unique: true
     },
     password: {
-        reuired: true,
+        type: String,
+        required: true,
     },
     repositories: [{
-        default: [],
         type: Schema.Types.ObjectId,
         ref: "Repository",
+        default: [],
     }],
     followedUsers: [{
-        default: [],
+
         type: Schema.Types.ObjectId,
         ref: "User",
+        default: [],
     }],
     starRepo: [{
-        default: [],
+
         type: Schema.Types.ObjectId,
-        ref: "Repository"
+        ref: "Repository",
+        default: [],
     }]
 
 })
 
 const User = mongoose.model("User", UserSchema)
-export default User;
+module.exports = User;

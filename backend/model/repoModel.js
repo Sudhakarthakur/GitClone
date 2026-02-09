@@ -1,31 +1,31 @@
 const mongoose = require('mongoose');
-const {
-    boolean
-} = require('yargs');
+// const {
+//     Boolean
+// } = require('yargs');
 const {
     Schema
 } = mongoose;
 
 const RepositorySchema = new Schema({
     name: {
-        typw: String,
+        type: String,
         required: true,
         unique: true,
     },
     description: {
         type: String,
     },
-    content: {
+    content: [{
         type: String,
-    },
+    }],
     visibility: {
-        type: boolean,
+        type: Boolean,
     },
-    owner: {
+    owner: [{
         type: Schema.Types.ObjectId,
         ref: "User",
         required: true,
-    },
+    }],
     issues: [{
         type: Schema.Types.ObjectId,
         ref: "Issue",
@@ -33,4 +33,4 @@ const RepositorySchema = new Schema({
 })
 
 const Repository = mongoose.model("Repository", RepositorySchema);
-export default Repository;
+module.exports = Repository;
