@@ -4,6 +4,7 @@ const {
 } = mongoose;
 
 const IssueSchema = new Schema({
+    Timestamps: true,
     title: {
         type: String,
         require: true,

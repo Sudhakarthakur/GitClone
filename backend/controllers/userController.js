@@ -71,7 +71,10 @@ async function signup(req, res) {
         }, process.env.JWT_SECRET_KEY, {
             expiresIn: "1h"
         })
-        res.json(token)
+        res.json({
+            token,
+            userId: result.insertId
+        })
     } catch (err) {
         console.error("Error during signup ", err.message);
         res.status(500).send("Server error")
@@ -86,8 +89,8 @@ async function login(req, res) {
     } = req.body;
     try {
         await connectClient();
-        const db = client.db("gitgubClone")
-        const userCollection = db.collection("user");
+        const db = client.db("githubClone")
+        const userCollection = db.collection("users");
         const user = await userCollection.findOne({
             email
         })
@@ -123,8 +126,8 @@ async function getUserProfile(req, res) {
     const CurrentID = req.params.id;
     try {
         await connectClient();
-        const db = client.db("gitgubClone");
-        const usersCollection = db.collection("user");
+        const db = client.db("githubClone");
+        const usersCollection = db.collection("users");
         const user = await usersCollection.findOne({
             _id: new ObjectId(CurrentID),
         })
@@ -142,7 +145,7 @@ async function getUserProfile(req, res) {
         return res.status(500).send("Server Error")
     }
 
-}
+} 
 
 const updateUserProfile = (req, res) => {
     res.send("feaching all users");
@@ -152,7 +155,7 @@ async function deleteUserProfile(req, res) {
     const CurrentId = req.params.id;
     try {
         await connectClient();
-        const db = client.db("gitgubClone");
+        const db = client.db("githubClone");
         const usersCollection = db.collection("user");
         const result = await usersCollection.findOne({
             _id: new ObjectId(CurrentId),

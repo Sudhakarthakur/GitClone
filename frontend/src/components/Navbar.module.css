@@ -1,0 +1,32 @@
+.contianer {
+    /* height: 20%; */
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 2px rgb(100, 99, 99) solid;
+    padding-bottom: 10px;
+    background-color:rgb(58, 57, 57) ;
+    
+}
+.ImageContiner,img{
+    width: 10%;
+    height: 20%;
+    /* padding-left: 10px; */
+    border-radius: 50%;
+}
+.navlinek{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    
+}
+a {
+    margin-left: 10px;
+    text-decoration:none;
+    color: white;
+}
+a:hover{
+    color: rgb(117, 104, 104);
+    text-decoration: color rgb(117, 104, 104);
+}

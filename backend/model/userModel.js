@@ -4,6 +4,7 @@ const {
 } = mongoose;
 
 const UserSchema = new Schema({
+    Timestamps: true,
     username: {
         type: String,
         required: true,
